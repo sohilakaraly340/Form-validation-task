@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" href="contact.css">
+   
+
+</head>
+
+<body>
+    <div class="contact">
+        <div>
+            <h1 class="center h1">Contact Us </h1>
+        </div>
+
+        <div class="cont">
+
+            <div class="form">
+
+                <table height="700px">
+                    <thead class="center">
+                        <tr>
+                            <td colspan="2"><span class="myspan">We’re Here for Any Question</span> </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <form>
+                            <tr>
+                                <td class="center">
+                                    <label>First Name</label> <br><br>
+                                    <input type="text" name="First name" id="first">
+                                </td>
+                                <td class="center">
+                                    <label> Last Name </label><br><br>
+                                    <input type="text" name="last name">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="center">
+                                    <label> Email*</label> <br><br>
+                                    <input type="email" name="email">
+                                </td>
+                                <td class="center">
+                                    <label> Subject </label><br><br>
+                                    <input type="text" name="Subject">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="center">
+                                    <label> Leave us a message... </label><br><br>
+                                    <textarea name="textarea"> </textarea>
+                                    <div><button id="btn">Submit</button></div>
+                                </td>
+                            </tr>
+                            <tr class="center">
+                                <td>
+                                    address <br><br>
+                                    ismailia ard st.<br>
+                                    bl,s 94158
+                                </td>
+                                <td>
+                                    info <br><br>
+                                    123-456-7890<br>
+                                    sohila@gmail.com
+                                </td>
+                            </tr>
+                        </form>
+
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <img id="img" src="img/1.webp">
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+
+
+<script>
+    var btn = document.getElementById('btn');
+    btn.addEventListener('click', function (event) {
+        event.preventDefault();
+        var firstname = document.getElementById("first");
+        localStorage.setItem("namevalue", firstname.value);
+        var childwimdow = window.open("index.html", "", "")
+    })
+
+
+</script>
+
+</html>
